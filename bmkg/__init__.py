@@ -29,7 +29,7 @@ def extract():
             latitude2 = "-" + latitude2
         else:
             latitude2 = latitude2
-        longitude = result[3].text.split(' - ')[1]
+        longitude = result[3].text.split(' - ')[1].split(' ')[0]
         result = dict()
         result["date"] = date
         result["time"] = time
