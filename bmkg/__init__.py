@@ -46,7 +46,6 @@ def show(result):
     if result is None:
         print("Can't find data")
         return
-    print("Last Earthquake Based on BMKG")
     print(f"Date : {result['date']}")
     print(f"Magnitude : {result['magnitude']}")
     print(f"Depth : {result['depth']}")
