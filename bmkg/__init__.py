@@ -29,12 +29,14 @@ def extract():
             latitude2 = "-" + latitude2
         else:
             latitude2 = latitude2
-
+        longitude = result[3].text.split(' - ')[1]
         result = dict()
         result["date"] = date
         result["time"] = time
         result["magnitude"] = magnitude
         result["depth"] = depth
+        result["latitude"] = latitude2
+        result["longitude"] = longitude
         return result
 
     else:
@@ -48,3 +50,5 @@ def show(result):
     print(f"Date : {result['date']}")
     print(f"Magnitude : {result['magnitude']}")
     print(f"Depth : {result['depth']}")
+    print(f"latitide : {result['latitude']}")
+    print(f"longitude : {result['longitude']}")
